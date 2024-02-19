@@ -2,15 +2,31 @@
 
 ## Techstack
 
-- Next.js
-- React Query
-- Ethers.js
-- Tailwind CSS
+- Next.js v14 (React 18)
+- Ethers.js v6
+- Tailwind CSS with Shadcn/UI
 - React Hook Form
 
 ## To be determined
 
-- [Shadcn/UI](https://ui.shadcn.com/)(UI component library)
 - Redux/Zustand/MobX (State Management)
-- CSR/SSR Application structure
 - Custodial Wallet
+- React Query v5
+
+## How to run
+
+1. Install node modules
+
+```
+npm i
+```
+
+2. Run development environment
+
+```
+npm run dev
+```
+
+## To-do List
+
+- SEO Optimization
