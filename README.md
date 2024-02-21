@@ -1,4 +1,4 @@
-### NFT Marketplace Frontend (Production)
+### NFT Marketplace Frontend
 
 ## Techstack
 
