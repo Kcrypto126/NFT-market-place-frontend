@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
-import { cn } from '@/lib/utils';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-});
+import Head from '@/components/layouts/Head';
+import MediaProvider from '@/providers/MediaProvider';
+import { Media } from '@/utils/media';
+import LayoutDesktop from './layoutDesktop';
+import LayoutMobile from './layoutMobile';
 
 export const metadata: Metadata = {
   title: 'Givabit',
@@ -20,14 +18,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={cn(
-          'min-h-screen bg-background font-sans antialiased',
-          inter.variable
-        )}
-      >
-        {children}
-      </body>
+      <Head />
+      <MediaProvider>
+        <body>
+          <Media greaterThanOrEqual='md'>
+            <LayoutDesktop>{children}</LayoutDesktop>
+          </Media>
+          <Media lessThan='md'>
+            <LayoutMobile>{children}</LayoutMobile>
+          </Media>
+        </body>
+      </MediaProvider>
     </html>
   );
 }
