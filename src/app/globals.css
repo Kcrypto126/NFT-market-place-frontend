@@ -43,6 +43,9 @@
     --input: 0 0% 74.12%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    /* custom styles */
+    --side-border: #bdbdbd;
   }
 
   /* .dark {
@@ -78,7 +81,7 @@
   }
 
   nav {
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid var(--side-border);
   }
 }
 
@@ -86,4 +89,10 @@
   color: #65676b;
   font-weight: bold;
   font-size: 16px;
+}
+
+.drawer-content {
+  @apply rounded-br-xl;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }

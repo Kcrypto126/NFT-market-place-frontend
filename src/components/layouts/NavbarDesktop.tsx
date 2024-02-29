@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   NavigationMenu,
@@ -11,26 +12,7 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { Button } from '../ui/button';
-
-const navLinks = [
-  {
-    title: 'Home',
-    href: '/',
-  },
-  {
-    title: 'About',
-    href: '/about',
-  },
-  {
-    title: 'How it works',
-    href: '/how',
-  },
-  {
-    title: 'Contact Us',
-    href: '/contact',
-  },
-];
+import { NAVLINKS } from '@/utils/constants';
 
 export default function NavbarDesktop() {
   return (
@@ -48,14 +30,9 @@ export default function NavbarDesktop() {
                 style={{ width: 'auto', height: '50px' }}
               />
             </NavigationMenuItem>
-            {navLinks.map((nav, i) => (
+            {NAVLINKS.map((nav, i) => (
               <NavigationMenuItem key={i}>
-                <Link
-                  href={nav.href}
-                  legacyBehavior
-                  passHref
-                  className='cursor-pointer'
-                >
+                <Link href={nav.href} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     <span className='nav-text'>{nav.title}</span>
                   </NavigationMenuLink>
