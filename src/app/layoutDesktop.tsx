@@ -9,7 +9,7 @@ export default function LayoutDesktop({
   return (
     <div className='flex h-screen w-screen flex-col justify-between'>
       <NavbarDesktop />
-      <main className='container mb-auto'>{children}</main>
+      <main className='mb-auto'>{children}</main>
       <FooterDesktop />
     </div>
   );

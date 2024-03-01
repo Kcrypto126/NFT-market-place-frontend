@@ -23,11 +23,11 @@
 
 @layer base {
   :root {
-    --background: 0 0% 87.84%;
+    --background: 0 0% 96.08%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
-    --popover: 204 33.3% 97.1%;
+    --popover: 204 23.8% 95.9%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 190, 67.6%, 43.5%;
     --primary-foreground: 210 40% 98%;
@@ -35,7 +35,7 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 220 2.9% 40.8%;
-    --accent: 210 40% 96.1%;
+    --accent: 230.8 35.1% 14.5%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -43,6 +43,8 @@
     --input: 0 0% 74.12%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
+
+    --color-link-gray: 220 2.9% 40.8%;
   }
 
   /* .dark {
@@ -75,6 +77,32 @@
 
   body {
     @apply min-h-screen bg-background font-feather antialiased;
+    /* nextjs media query bug */
+    overflow-x: hidden;
+  }
+
+  h1 {
+    @apply text-5xl font-extrabold dark:text-white;
+  }
+
+  h2 {
+    @apply text-4xl font-bold dark:text-white;
+  }
+
+  h2 {
+    @apply text-3xl font-bold dark:text-white;
+  }
+
+  h4 {
+    @apply text-2xl font-bold dark:text-white;
+  }
+
+  h5 {
+    @apply text-xl font-bold dark:text-white;
+  }
+
+  h6 {
+    @apply text-lg font-bold dark:text-white;
   }
 }
 
@@ -83,7 +111,7 @@
 }
 
 .nav-text {
-  color: #65676b;
+  color: var(--color-link-gray);
   font-weight: bold;
   font-size: 16px;
 }
