@@ -16,7 +16,7 @@ export default function SidebarMobile() {
       <NavigationMenuList className='flex flex-col items-start'>
         <NavigationMenuItem className='px-3 pb-2'>
           <Image
-            src='/givabit-logo.png'
+            src='/givabit-logo.svg'
             alt='givabit logo'
             width={0}
             height={0}

@@ -21,7 +21,7 @@ export default function FooterDesktop() {
             </Link>
           </div>
         </div>
-        <div>
+        <div className='flex gap-2'>
           {IconButton(Facebook)}
           {IconButton(Twitter)}
         </div>

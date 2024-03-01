@@ -7,7 +7,7 @@ export default function LayoutDesktop({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex h-screen w-screen flex-col justify-between'>
+    <div className=' flex h-screen w-screen flex-col justify-between'>
       <NavbarDesktop />
       <main className='mb-auto'>{children}</main>
       <FooterDesktop />
