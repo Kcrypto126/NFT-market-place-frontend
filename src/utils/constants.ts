@@ -1,5 +1,5 @@
 // App
-export const COPYRIGHT = '© 2024, GIVABIT.IO';
+export const COPYRIGHT = '©2024, Givabit.io, Inc. All rights reserved.';
 export const NAVLINKS = [
   {
     title: 'Home',

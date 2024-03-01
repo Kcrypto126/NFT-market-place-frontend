@@ -1,3 +1,4 @@
+import FooterMobile from '@/components/layouts/FooterMobile';
 import NavbarMobile from '@/components/layouts/NavbarMobile';
 
 export default function LayoutMobile({
@@ -6,9 +7,10 @@ export default function LayoutMobile({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex h-screen flex-col justify-between'>
       <NavbarMobile />
-      {children}
+      <main className='mb-auto'>{children}</main>
+      <FooterMobile />
     </div>
   );
 }

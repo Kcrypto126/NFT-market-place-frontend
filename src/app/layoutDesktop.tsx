@@ -1,3 +1,4 @@
+import FooterDesktop from '@/components/layouts/FooterDesktop';
 import NavbarDesktop from '@/components/layouts/NavbarDesktop';
 
 export default function LayoutDesktop({
@@ -6,9 +7,10 @@ export default function LayoutDesktop({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex w-screen flex-col'>
+    <div className='flex h-screen w-screen flex-col justify-between'>
       <NavbarDesktop />
-      {children}
+      <main className='container mb-auto'>{children}</main>
+      <FooterDesktop />
     </div>
   );
 }
