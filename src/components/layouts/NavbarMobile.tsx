@@ -24,19 +24,19 @@ export default function NavbarMobile() {
                 <DrawerTrigger asChild>
                   <Menu />
                 </DrawerTrigger>
-                <DrawerContent className='drawer-content-l h-full w-[200px] outline-none'>
+                <DrawerContent className='h-full w-[200px] outline-none'>
                   <SidebarMobile />
                 </DrawerContent>
               </Drawer>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <Image
-                src='/givabit-logo.png'
+                src='/givabit-logo.svg'
                 alt='givabit logo'
                 width={0}
                 height={0}
                 sizes='100vw'
-                style={{ width: 'auto', height: '50px' }}
+                style={{ width: 'auto', height: '30px' }}
               />
             </NavigationMenuItem>
             <NavigationMenuItem>

@@ -51,7 +51,7 @@ export default function CategoryBar() {
               className='text-primary group-hover:bg-primary group-hover:text-white'
               size={40}
             />
-            <p className=' text-accent group-hover:text-white '>{title}</p>
+            <p className='group-hover:text-white '>{title}</p>
           </div>
         </Link>
       ))}

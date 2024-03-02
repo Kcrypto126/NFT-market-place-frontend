@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --color-gray: #f6f6f6;
---color-subtitle: #bf2356;
---background-color-1: #24243557;
---background-color-2: #13131d;
---background-color-3: #151521;
---background-color-4: #242435;
---gradient-one: linear-gradient(to right bottom, #2e92a7, #24a1ba); */
-
 @font-face {
   font-family: 'Feather';
   src:
@@ -35,16 +27,14 @@
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 220 2.9% 40.8%;
-    --accent: 230.8 35.1% 14.5%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 230.8 35.1% 14.5%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 0 0% 74.1%;
     --input: 0 0% 74.12%;
     --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-
-    --color-link-gray: 220 2.9% 40.8%;
   }
 
   /* .dark {
@@ -76,7 +66,7 @@
   }
 
   body {
-    @apply min-h-screen bg-background font-feather antialiased;
+    @apply min-h-screen bg-background font-feather text-grey antialiased;
     /* nextjs media query bug */
     overflow-x: hidden;
   }
@@ -108,12 +98,6 @@
 
 .nav-desktop {
   @apply container flex h-[85px] items-center justify-between;
-}
-
-.nav-text {
-  color: var(--color-link-gray);
-  font-weight: bold;
-  font-size: 16px;
 }
 
 .drawer-content-l {

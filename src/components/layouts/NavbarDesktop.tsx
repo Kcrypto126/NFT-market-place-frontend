@@ -1,18 +1,14 @@
 'use client';
 
-import Image from 'next/image';
-import Link from 'next/link';
 import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   NavigationMenu,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
-import { NAVLINKS } from '@/utils/constants';
+import Navlinks from './NavLinks';
 
 export default function NavbarDesktop() {
   return (
@@ -21,27 +17,7 @@ export default function NavbarDesktop() {
         <div className='w-screen'>
           <div className='nav-desktop'>
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <Image
-                  src='/givabit-logo.png'
-                  alt='givabit logo'
-                  width={0}
-                  height={0}
-                  sizes='100vw'
-                  style={{ width: 'auto', height: '50px' }}
-                />
-              </NavigationMenuItem>
-              {NAVLINKS.map((nav, i) => (
-                <NavigationMenuItem key={i}>
-                  <Link href={nav.href} legacyBehavior passHref>
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      <span className='nav-text'>{nav.title}</span>
-                    </NavigationMenuLink>
-                  </Link>
-                </NavigationMenuItem>
-              ))}
+              <Navlinks className='pr-5' />
             </NavigationMenuList>
             <NavigationMenuList className='gap-1'>
               <NavigationMenuItem>
