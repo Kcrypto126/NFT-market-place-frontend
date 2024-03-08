@@ -1,22 +1,59 @@
-interface Options {
-  [key: string]: string;
-}
+import { RequestInit } from 'next/dist/server/web/spec-extension/request';
+import { ApiResponse } from '@/types/response.type';
 
-export const getRequest = async <DataType>(url: string): Promise<DataType> => {
-  return request<DataType>(url, 'GET', 'Failed to fetch data');
-};
-
-export const request = async <DataType>(
+export function postRequest<DataType>(
   url: string,
-  reqMethod: string,
-  errorMessage: string,
-  options?: Options
-): Promise<DataType> => {
-  const res = await fetch(url, { method: reqMethod, ...options });
+  data: DataType,
+  noCaching?: boolean,
+  includeCredentials = false
+) {
+  let options = {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(data),
+  } as RequestInit;
 
-  if (!res.ok) {
-    console.error(errorMessage);
+  if (includeCredentials) {
+    options = {
+      ...options,
+      credentials: 'include',
+    };
   }
 
-  return res.json();
+  return request(url, options, noCaching);
+}
+
+export function getRequest(url: string, noCaching?: boolean) {
+  return request(
+    url,
+    {
+      method: 'GET',
+    },
+    noCaching
+  );
+}
+
+const request = async <ResponseDataType>(
+  url: string,
+  options: RequestInit,
+  noCaching = false
+): Promise<ApiResponse<ResponseDataType>> => {
+  try {
+    const fetchOptions = { ...options };
+
+    if (noCaching) {
+      fetchOptions.cache = 'no-store';
+    }
+
+    const request = await fetch(url, fetchOptions);
+    const response = await request.json();
+
+    if (response.error) {
+      throw new Error(response.error);
+    }
+
+    return response;
+  } catch (error) {
+    return { error: 'An unexpected error occurred' };
+  }
 };

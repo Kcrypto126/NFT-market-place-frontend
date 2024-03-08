@@ -96,6 +96,41 @@
   }
 }
 
+/* for loading screen to work in compensation for fresnel */
+.media-loader {
+  display: none;
+}
+
+@media all and (max-width: 1023px) {
+  .media-loader {
+    display: block;
+  }
+}
+
+.connect-btn {
+  @apply flex justify-center rounded-xl border-gray-400 bg-secondary font-bold hover:bg-primary !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.tw-connected-wallet {
+  @apply bg-popover hover:bg-gray-200 !important;
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+  img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  div > span:nth-child(1) {
+    display: none;
+  }
+
+  div > span:nth-child(2) {
+    font-size: 14px !important;
+  }
+}
+
 .nav-desktop {
   @apply container flex h-[85px] items-center justify-between;
 }

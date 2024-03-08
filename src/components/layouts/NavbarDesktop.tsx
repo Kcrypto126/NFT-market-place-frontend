@@ -1,7 +1,5 @@
 'use client';
 
-import * as React from 'react';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
   NavigationMenu,
@@ -9,6 +7,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 import Navlinks from './NavLinks';
+import WalletLogin from '../WalletLogin';
 
 export default function NavbarDesktop() {
   return (
@@ -24,9 +23,7 @@ export default function NavbarDesktop() {
                 <Input type='text' placeholder='Search' />
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Button className='text-md bg-secondary font-bold hover:bg-primary'>
-                  Wallet Connect
-                </Button>
+                <WalletLogin />
               </NavigationMenuItem>
             </NavigationMenuList>
           </div>

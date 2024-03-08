@@ -3,7 +3,6 @@
 import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import * as React from 'react';
-import { Button } from '@/components/ui/button';
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
 import { Input } from '@/components/ui/input';
 import {
@@ -12,6 +11,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu';
 import SidebarMobile from './SidebarMobile';
+import WalletLogin from '../WalletLogin';
 
 export default function NavbarMobile() {
   return (
@@ -40,9 +40,7 @@ export default function NavbarMobile() {
               />
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Button className='text-md bg-secondary font-bold hover:bg-primary'>
-                Signup
-              </Button>
+              <WalletLogin />
             </NavigationMenuItem>
           </NavigationMenuList>
           <NavigationMenuList>
