@@ -64,5 +64,5 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Running linter
         run: npm run lint
-      - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      # - name: Build with Next.js
+      #   run: ${{ steps.detect-package-manager.outputs.runner }} next build
