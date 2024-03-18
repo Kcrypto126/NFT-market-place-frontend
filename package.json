@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint --cache --fix && npx prettier --write",
+    "lint": "npm run eslint && npm run prettier",
+    "eslint": "npx eslint '**/*.{js,jsx,ts,tsx}' --cache --fix",
+    "prettier": "npx prettier '**/*.{js,jsx,ts,tsx,json,css}' --write",
     "prepare": "husky install"
   },
   "dependencies": {

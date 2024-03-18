@@ -1,9 +1,9 @@
 import { RequestInit } from 'next/dist/server/web/spec-extension/request';
 import { ApiResponse } from '@/types/response.type';
 
-export function postRequest<DataType>(
+export function postRequest<ResponseData>(
   url: string,
-  data: DataType,
+  data: ResponseData,
   noCaching?: boolean,
   includeCredentials = false
 ) {
@@ -20,7 +20,7 @@ export function postRequest<DataType>(
     };
   }
 
-  return request(url, options, noCaching);
+  return request<ResponseData>(url, options, noCaching);
 }
 
 export function getRequest(url: string, noCaching?: boolean) {
@@ -33,11 +33,11 @@ export function getRequest(url: string, noCaching?: boolean) {
   );
 }
 
-const request = async <ResponseDataType>(
+const request = async <ResponseData>(
   url: string,
   options: RequestInit,
   noCaching = false
-): Promise<ApiResponse<ResponseDataType>> => {
+): Promise<ApiResponse<ResponseData>> => {
   try {
     const fetchOptions = { ...options };
 

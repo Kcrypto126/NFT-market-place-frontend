@@ -43,9 +43,9 @@ const causes = [
 
 export default function CategoryBar() {
   return (
-    <div className='container flex  flex-wrap justify-between gap-8 py-20 '>
+    <div className='container flex flex-wrap justify-center gap-5 px-0 py-20 '>
       {causes.map(({ title, href, Component }, i) => (
-        <Link key={i} href={href} className='group w-min grow basis-0'>
+        <Link key={i} href={href} className='w-[210px] '>
           <div className='group   flex  cursor-pointer flex-col items-center gap-1 rounded-lg bg-card py-6 hover:bg-primary'>
             <Component
               className='text-primary group-hover:bg-primary group-hover:text-white'
