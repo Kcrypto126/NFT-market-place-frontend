@@ -1,15 +1,13 @@
-import CategoryBar from '@/components/layouts/home/CategoryBar';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
+import BannerPanel from '@/components/layouts/home/BannerPanel';
+import CategoryPanel from '@/components/layouts/home/CategoryPanel';
+import CollectionPanel from '@/components/layouts/home/CollectionPanel';
 
 export default function Home() {
   return (
     <div>
-      <div className='w-[1920px]'>
-        <AspectRatio ratio={16 / 8}>
-          <img src='https://placehold.co/1920x960' alt='placeholder' />
-        </AspectRatio>
-      </div>
-      <CategoryBar />
+      <BannerPanel />
+      <CategoryPanel />
+      <CollectionPanel />
     </div>
   );
 }
