@@ -41,11 +41,11 @@ const causes = [
   },
 ];
 
-export default function CategoryBar() {
+export default function CategoryPanel() {
   return (
-    <div className='container flex flex-wrap justify-center gap-5 px-0 py-20 '>
+    <div className='container grid grid-cols-1 gap-5 py-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
       {causes.map(({ title, href, Component }, i) => (
-        <Link key={i} href={href} className='w-[210px] '>
+        <Link key={i} href={href}>
           <div className='group   flex  cursor-pointer flex-col items-center gap-1 rounded-lg bg-card py-6 hover:bg-primary'>
             <Component
               className='text-primary group-hover:bg-primary group-hover:text-white'

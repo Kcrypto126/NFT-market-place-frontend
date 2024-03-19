@@ -16,7 +16,7 @@
 @layer base {
   :root {
     --background: 0 0% 96.08%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 231 35% 15%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
     --popover: 204 23.8% 95.9%;
@@ -24,7 +24,7 @@
     --primary: 190, 67.6%, 43.5%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210.9 62.7% 20%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary-foreground: 0 0% 100%;
     --muted: 210 40% 96.1%;
     --muted-foreground: 220 2.9% 40.8%;
     --accent: 210 40% 96.1%;
@@ -72,27 +72,27 @@
   }
 
   h1 {
-    @apply text-5xl font-extrabold dark:text-white;
+    @apply text-[2em] font-extrabold text-foreground dark:text-white !important;
   }
 
   h2 {
-    @apply text-4xl font-bold dark:text-white;
+    @apply text-[1.5em] font-bold text-foreground dark:text-white !important;
   }
 
-  h2 {
-    @apply text-3xl font-bold dark:text-white;
+  h3 {
+    @apply text-[1.17em] font-bold text-foreground dark:text-white !important;
   }
 
   h4 {
-    @apply text-2xl font-bold dark:text-white;
+    @apply text-[1em] font-bold text-foreground dark:text-white !important;
   }
 
   h5 {
-    @apply text-xl font-bold dark:text-white;
+    @apply text-xl font-bold text-foreground dark:text-white !important;
   }
 
   h6 {
-    @apply text-lg font-bold dark:text-white;
+    @apply text-lg font-bold text-foreground dark:text-white !important;
   }
 }
 
