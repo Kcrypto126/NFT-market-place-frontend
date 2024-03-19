@@ -1,7 +1,6 @@
 'use client';
 
 import { default as NextHead } from 'next/head';
-import { mediaStyles } from '@/utils/media';
 
 export default function Head() {
   return (
@@ -24,11 +23,6 @@ export default function Head() {
         href='/assets/favicon-16x16.png'
       />
       <link rel='manifest' href='/manifest.webmanifest' />
-      <style
-        key='fresnel-css'
-        dangerouslySetInnerHTML={{ __html: mediaStyles }}
-        type='text/css'
-      />
     </NextHead>
   );
 }
