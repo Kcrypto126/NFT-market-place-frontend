@@ -26,7 +26,7 @@ const collections = [
 
 export default function CollectionPanel() {
   return (
-    <div className='container'>
+    <div className='container py-10'>
       <HeaderBar header='Top Collections' />
       <div className='grid grid-cols-1 gap-5 px-0 sm:grid-cols-2 md:grid-cols-4'>
         {collections.map(({ id, title, total }) => (

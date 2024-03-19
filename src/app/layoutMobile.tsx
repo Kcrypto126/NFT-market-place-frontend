@@ -7,7 +7,7 @@ export default function LayoutMobile({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='flex h-screen flex-col justify-between'>
+    <div className='flex h-screen flex-col justify-between md:hidden'>
       <NavbarMobile />
       <main className='mb-auto'>{children}</main>
       <FooterMobile />

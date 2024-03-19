@@ -43,7 +43,7 @@ const causes = [
 
 export default function CategoryPanel() {
   return (
-    <div className='container grid grid-cols-1 gap-5 py-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
+    <div className='container grid grid-cols-1 gap-5 pb-10 pt-20 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
       {causes.map(({ title, href, Component }, i) => (
         <Link key={i} href={href}>
           <div className='group   flex  cursor-pointer flex-col items-center gap-1 rounded-lg bg-card py-6 hover:bg-primary'>

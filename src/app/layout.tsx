@@ -1,10 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Head from '@/components/layouts/Head';
-import MediaLoader from '@/components/layouts/MediaLoader';
-import MediaProvider from '@/providers/MediaProvider';
 import WalletProvider from '@/providers/WalletProvider';
-import { Media } from '@/utils/media';
 import LayoutDesktop from './layoutDesktop';
 import LayoutMobile from './layoutMobile';
 
@@ -22,17 +19,10 @@ export default function RootLayout({
     <html lang='en'>
       <Head />
       <WalletProvider>
-        <MediaProvider>
-          <body>
-            <MediaLoader />
-            <Media greaterThanOrEqual='md'>
-              <LayoutDesktop>{children}</LayoutDesktop>
-            </Media>
-            <Media lessThan='md'>
-              <LayoutMobile>{children}</LayoutMobile>
-            </Media>
-          </body>
-        </MediaProvider>
+        <body>
+          <LayoutMobile>{children}</LayoutMobile>
+          <LayoutDesktop>{children}</LayoutDesktop>
+        </body>
       </WalletProvider>
     </html>
   );

@@ -37,12 +37,6 @@ npm i
 npm run dev
 ```
 
-## Responsive Design React Server Components (RSC)
-
-Responsive design relies heavily on client-side or browser information to render appropriately. With the shift to RSC, there's currently no perfect solution but various workarounds. This project is using [@artsy/fresnel](https://github.com/artsy/fresnel) to do an initial rendering for all breakpoints and removing the unwanted dom elements on receiving the breakpoint in use.
-
-The MediaLoader component (overlay loading screen) is added to compensate for the brief flickering due to the initial rendering.
-
 ## Caching with Next.js
 
 Nextjs employed [caching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating) with `fetch` to improve performance. Depending on circumstances, data might not be updated as expected. On the other hand, one-off data especially with authentication should not be cache. Check `api.ts` for pre-build API calls.
