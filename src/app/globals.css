@@ -107,6 +107,10 @@
   }
 }
 
+.content {
+  @apply container lg:my-10 !important;
+}
+
 .connect-btn {
   @apply flex justify-center rounded-xl border-gray-400 bg-secondary font-bold hover:bg-primary !important;
   padding-top: 10px !important;

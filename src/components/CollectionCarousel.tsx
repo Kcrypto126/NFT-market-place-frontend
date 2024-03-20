@@ -34,12 +34,13 @@ const collections = [
 
 interface Props {
   header: string;
+  href: string;
 }
 
-export function CollectionCarousel({ header }: Props) {
+export function CollectionCarousel({ header, href }: Props) {
   return (
-    <div className='container mb-10 md:py-3'>
-      <HeaderBar header={header} />
+    <div className='mb-10 md:py-3'>
+      <HeaderBar header={header} href={href} />
       <div className='px-12'>
         <Carousel
           opts={{

@@ -7,36 +7,37 @@ import {
   Sprout,
 } from 'lucide-react';
 import Link from 'next/link';
+import { CATEGORY, CATEGORY_SLUGS } from '@/types/category.enum';
 
 const causes = [
   {
-    title: 'Education',
-    href: '/education',
+    title: CATEGORY.EDUCATION,
+    href: `/category/${CATEGORY_SLUGS.EDUCATION}`,
     Component: BookOpen,
   },
   {
-    title: 'Health',
-    href: '/health',
+    title: CATEGORY.HEALTH,
+    href: `/category/${CATEGORY_SLUGS.HEALTH}`,
     Component: HeartPulse,
   },
   {
-    title: 'Animal Welfare',
-    href: '/animal',
+    title: CATEGORY.ANIMAL_WELFARE,
+    href: `/category/${CATEGORY_SLUGS.ANIMAL}`,
     Component: PawPrint,
   },
   {
-    title: 'Human Services',
-    href: '/human',
+    title: CATEGORY.HUMAN_SERVICES,
+    href: `/category/${CATEGORY_SLUGS.HUMAN}`,
     Component: HandHelping,
   },
   {
-    title: 'Arts & Culture',
-    href: '/arts',
+    title: CATEGORY.ARTS_CULTURE,
+    href: `/category/${CATEGORY_SLUGS.ARTS}`,
     Component: Palette,
   },
   {
-    title: 'Environment',
-    href: '/environment',
+    title: CATEGORY.ENVIRONMENT,
+    href: `/category/${CATEGORY_SLUGS.ENVIRONMENT}`,
     Component: Sprout,
   },
 ];

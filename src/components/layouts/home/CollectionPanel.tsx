@@ -19,7 +19,7 @@ const collections = [
   },
   {
     id: '4',
-    title: 'Walk in my shoes gekki123456789',
+    title: 'Walk in my shoes',
     total: 40,
   },
 ];
@@ -27,7 +27,7 @@ const collections = [
 export default function CollectionPanel() {
   return (
     <div className='container py-10'>
-      <HeaderBar header='Top Collections' />
+      <HeaderBar header='Top Collections' href='/collections' />
       <div className='grid grid-cols-1 gap-5 px-0 sm:grid-cols-2 md:grid-cols-4'>
         {collections.map(({ id, title, total }) => (
           <CollectionCard key={id} id={id} title={title} total={total} />
