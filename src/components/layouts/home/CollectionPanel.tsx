@@ -28,7 +28,7 @@ export default function CollectionPanel() {
   return (
     <div className='container py-10'>
       <HeaderBar header='Top Collections' href='/collections' />
-      <div className='grid grid-cols-1 gap-5 px-0 sm:grid-cols-2 md:grid-cols-4'>
+      <div className='grid grid-cols-1 gap-5 px-0 md:grid-cols-3 lg:grid-cols-4'>
         {collections.map(({ id, title, total }) => (
           <CollectionCard key={id} id={id} title={title} total={total} />
         ))}

@@ -1,0 +1,92 @@
+{
+  "data": {
+    "id": "ac48c184-7364-451b-9691-83978a323fda",
+    "createdAt": "2023-12-19T06:41:44.790Z",
+    "updatedAt": "2023-12-19T06:41:44.790Z",
+    "network": "POLYGON_MUMBAI",
+    "scAddress": "0xa3706f2c177d7e32db69a6bd159ae91f83513403",
+    "tokenId": 70252977,
+    "price": 0.1,
+    "name": "Confucius A1",
+    "imageStorageId": null,
+    "imageUrl": "https://n4g-staging.sgp1.digitaloceanspaces.com/staging/media/fa/8b/fa8bd2ac-6c2c-474c-8a51-cca76422f5b3-Confucius_C1.mp4",
+    "imageIpfsUrl": "https://ipfs.io/ipfs/bafybeig6pfrjcoajsh6ul6c624tvqzaouxsm6gbuhehsdrz3flavjrrope/Confucius_C1.mp4",
+    "description": "Chinese Philosopher",
+    "type": "VIDEO",
+    "attributes": [
+      {
+        "value": "Space",
+        "trait_type": "background"
+      },
+      {
+        "value": "Starship",
+        "trait_type": "window"
+      },
+      {
+        "value": "White",
+        "trait_type": "light"
+      },
+      {
+        "value": "Confucius",
+        "trait_type": "quote"
+      },
+      {
+        "value": "blue",
+        "trait_type": "quote_color"
+      }
+    ],
+    "rawMetadata": {
+      "youtube_url": "",
+      "external_url": "https://givabit.io",
+      "animation_url": ""
+    },
+    "properties": null,
+    "metadataIpfsUrl": null,
+    "collectionId": "42d5e744-d792-46c3-8cc2-f75a8d697890",
+    "ownerId": "2b63b52c-0bf4-4329-a6a5-faa7e07ffafe",
+    "status": "ACTIVE",
+    "immutable": "YES",
+    "mintedTxId": null,
+    "creatorWallet": null,
+    "royalty": 0,
+    "tokenUri": "",
+    "isMinted": false,
+    "owner": {
+      "id": "2b63b52c-0bf4-4329-a6a5-faa7e07ffafe",
+      "createdAt": "2023-09-21T07:07:54.564Z",
+      "updatedAt": "2023-09-21T07:07:54.564Z",
+      "wallet": "0xc056A8940fb12bF2Ed192F80f7Fd75279ED00f0d",
+      "imageUrl": null,
+      "name": null,
+      "description": null,
+      "countryCode": null,
+      "status": "ACTIVE",
+      "socialMedia": null
+    },
+    "sales": [],
+    "collection": {
+      "id": "42d5e744-d792-46c3-8cc2-f75a8d697890",
+      "createdAt": "2023-12-11T08:02:14.804Z",
+      "updatedAt": "2023-12-11T08:06:31.885Z",
+      "name": "Champions of education",
+      "description": "Follow your favorite Genius!",
+      "ownerId": "18b2dfb9-3cb5-4549-aa40-12cc949f9883",
+      "imageStorageId": "32e85126-88a7-447c-a517-0b442d9c542d",
+      "imageUrl": "https://n4g-staging.sgp1.digitaloceanspaces.com/staging/media/32/e8/32e85126-88a7-447c-a517-0b442d9c542d-Champions-of-education.jpg",
+      "status": "PUBLISHED",
+      "topicId": "0620a7ac-3a19-4037-b30d-03f80338a82e",
+      "artistAddress": "0xa44aEa029C11caD602B735bb673Ad9b0f8aAf776"
+    },
+    "cause": {
+      "id": "a36da63b-c3a7-4294-ae87-21ee239ce7a1",
+      "createdAt": "2023-03-28T19:16:35.769Z",
+      "updatedAt": "2023-03-28T19:16:35.769Z",
+      "name": "Education",
+      "parentId": null,
+      "isParent": true,
+      "imageStorageId": null,
+      "imageUrl": null,
+      "status": "ACTIVE"
+    }
+  }
+}

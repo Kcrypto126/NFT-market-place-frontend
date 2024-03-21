@@ -14,26 +14,26 @@ export function CollectionCard({ id, title, total }: Props) {
       <Card className='border-none p-4 xl:p-6'>
         <CardContent className='p-0'>
           <img
-            className='h-28 w-full rounded-md object-cover sm:h-36 md:h-40 xl:h-44'
-            src='https://picsum.photos/seed/picsum/300'
+            className='h-40 w-full rounded-md object-cover md:h-32 xl:h-44'
+            src={`https://picsum.photos/seed/picsum${id}/300`}
           />
           <div className='mt-2 grid grid-cols-3 gap-2'>
             <img
-              className='h-10 w-full rounded-md object-cover sm:h-12 md:h-12 xl:h-14'
-              src='https://picsum.photos/seed/hello/300'
+              className='h-14 w-full rounded-md object-cover md:h-12 xl:h-14'
+              src={`https://picsum.photos/seed/hello${id}/300`}
             />
             <img
-              className='d:h-12 h-10 w-full rounded-md object-cover sm:h-12 xl:h-14'
-              src='https://picsum.photos/seed/world/300'
+              className='h-14 w-full rounded-md object-cover md:h-12 xl:h-14'
+              src={`https://picsum.photos/seed/world${id}/300`}
             />
             <img
-              className='h-10 w-full rounded-md object-cover sm:h-12 md:h-12 xl:h-14'
-              src='https://picsum.photos/seed/peace/300'
+              className='h-14 w-full rounded-md object-cover md:h-12 xl:h-14'
+              src={`https://picsum.photos/seed/peace${id}/300`}
             />
           </div>
         </CardContent>
         <CardFooter className='mt-3 block p-0'>
-          <div className='xl:text-md line-clamp-1 text-sm'>{title}</div>
+          <div className='text-md line-clamp-1'>{title}</div>
           <Badge className='mt-2 rounded bg-popover font-normal text-gray-600'>
             {total} Items
           </Badge>
