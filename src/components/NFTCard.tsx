@@ -8,7 +8,6 @@ interface Props {
 }
 
 export function NFTCard({ id, title, price }: Props) {
-  console.log({ string: `${title}${id}` });
   return (
     <Link href={`/nft/${id}`}>
       <Card className='border-none p-1'>
