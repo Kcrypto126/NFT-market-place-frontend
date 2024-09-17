@@ -3,14 +3,14 @@ import { ApiResponse } from '@/types/response.type';
 
 export function postRequest<ResponseData>(
   url: string,
-  data: ResponseData,
+  params?: Record<string, unknown>,
   noCaching?: boolean,
   includeCredentials = false
 ) {
   let options = {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(data),
+    body: JSON.stringify(params ?? {}),
   } as RequestInit;
 
   if (includeCredentials) {
@@ -23,9 +23,13 @@ export function postRequest<ResponseData>(
   return request<ResponseData>(url, options, noCaching);
 }
 
-export function getRequest(url: string, noCaching?: boolean) {
+export function getRequest(
+  url: string,
+  params?: Record<string, string>,
+  noCaching?: boolean
+) {
   return request(
-    url,
+    url + '?' + new URLSearchParams(params),
     {
       method: 'GET',
     },

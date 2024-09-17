@@ -6,16 +6,16 @@ export const withHeaders: MiddlewareFactory = (next: NextMiddleware) => {
     const response = await next(request, _next);
 
     const csp = `
-                default-src 'self';
-                script-src 'self' 'unsafe-eval' 'unsafe-inline';
-                style-src 'self' 'unsafe-inline';
-                img-src 'self' data:;
-                connect-src 'self';
-                font-src 'self';
-                object-src 'none';
-                media-src 'none';
-                frame-src 'none';
-            `
+      default-src 'self';
+      script-src 'self' 'unsafe-eval' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline';
+      img-src 'self' data:;
+      connect-src *;
+      font-src 'self';
+      object-src 'none';
+      media-src 'none';
+      frame-src *;
+    `
       .trim()
       .replace(/\s+/g, ' ');
 
