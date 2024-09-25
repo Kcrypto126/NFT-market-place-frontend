@@ -19,7 +19,7 @@ export default (phase, { defaultConfig }) => {
       ...baseConfig,
       env: {
         ...baseConfig.env,
-        appDomain: 'http://localhost:3001',
+        appDomain: 'http://localhost:3000',
         apiDomain: 'http://localhost:4000/api',
         chainId: '80001',
         activeChain: 'mumbai',
